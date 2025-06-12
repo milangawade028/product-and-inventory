@@ -1,0 +1,10 @@
+package com.example.product.inventory.exception;
+
+public class ProductNotFoundException extends RuntimeException {
+
+    public ProductNotFoundException(String message) {
+        super(message);
+    }
+
+
+}
