@@ -10,17 +10,17 @@ import java.time.LocalDateTime;
 public class InventoryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long productId;
-    private String productName;
-    private String description;
-    private int price;
-    private String category;
-    private String unit;
-
+    private Long productId;
+    private int availableQuantity;
+    private LocalDateTime lastUpdated;
 
     private boolean isActive;
     private String createdBy;
     private LocalDateTime createdDate;
     private String updatedBy;
     private LocalDateTime updatedDate;
+
+    @OneToOne
+    @JoinColumn(name = "product_id",nullable = false,unique = true)
+    private ProductEntity productEntity;
 }
