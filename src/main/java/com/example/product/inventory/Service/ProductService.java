@@ -25,10 +25,6 @@ public class ProductService {
         productEntity.setCategory(productDto.getCategory());
         productEntity.setUnit(productDto.getUnit());
 
-        productEntity.setCreatedBy(productDto.getCreatedBy());
-        productEntity.setCreatedDate(LocalDateTime.now());
-        productEntity.setUpdatedBy(productDto.getUpdatedBy());
-        productEntity.setUpdatedDate(LocalDateTime.now());
 
         return productRepo.save(productEntity);
     }

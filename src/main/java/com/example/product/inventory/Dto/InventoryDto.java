@@ -12,16 +12,34 @@ import java.time.LocalDateTime;
 public class InventoryDto {
 
 
-        private Long productId;
+       private Long productId;
         private int availableQuantity;
         private LocalDateTime lastUpdated;
 
-        private boolean isActive;
-        private String createdBy;
-        private LocalDateTime createdDate;
-        private String updatedBy;
-        private LocalDateTime updatedDate;
 
 
+        public Long getProductId() {
+                return productId;
+        }
+
+        public void setProductId(Long productId) {
+                this.productId = productId;
+        }
+
+        public int getAvailableQuantity() {
+                return availableQuantity;
+        }
+
+        public void setAvailableQuantity(int availableQuantity) {
+                this.availableQuantity = availableQuantity;
+        }
+
+        public LocalDateTime getLastUpdated() {
+                return lastUpdated;
+        }
+
+        public void setLastUpdated(LocalDateTime lastUpdated) {
+                this.lastUpdated = lastUpdated;
+        }
 }
 

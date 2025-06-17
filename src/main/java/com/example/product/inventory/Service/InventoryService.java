@@ -28,10 +28,6 @@ public class InventoryService {
         inventoryEntity.setAvailableQuantity(inventoryDto.getAvailableQuantity());
         inventoryEntity.setLastUpdated(inventoryDto.getLastUpdated());
 
-        inventoryEntity.setCreatedBy(inventoryDto.getCreatedBy());
-        inventoryEntity.setCreatedDate(LocalDateTime.now());
-        inventoryEntity.setUpdatedBy(inventoryDto.getUpdatedBy());
-        inventoryEntity.setUpdatedDate(LocalDateTime.now());
 
 
         inventoryEntity.setProductEntity(product);
@@ -51,8 +47,7 @@ public class InventoryService {
         inventoryEntity.setAvailableQuantity(inventoryDto.getAvailableQuantity());
         inventoryEntity.setLastUpdated(inventoryDto.getLastUpdated());
 
-        inventoryEntity.setUpdatedBy(inventoryDto.getUpdatedBy());
-        inventoryEntity.setUpdatedDate(LocalDateTime.now());
+
 
         return inventoryRepo.save(inventoryEntity);
 
